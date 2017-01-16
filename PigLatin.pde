@@ -30,14 +30,21 @@ public String pigLatin(String sWord)
 	{
 		return sWord + "ay";
 	}
-	else
+
+	if (findFirstVowel(sWord) = 0)
 	{
-		return "ERROR!";
+		return sWord + "way";
 	}
 
-	if (findFirstVowel(sWord) = true)
+	if (sWord.substring(0,2).equals("qu"))
 	{
-		String first = sWord.substring(0,2);
-
+		return sWord.substring(2) + "quay";
 	}
+
+	if (findFirstVowel(sWord) >= 1)
+	{
+		return sWord.substring(findFirstVowel(sWord)) + sWord.substring(0,findFirstVowel(sWord)) + "ay";
+	}
+
+		return "ERROR!";	
 }
